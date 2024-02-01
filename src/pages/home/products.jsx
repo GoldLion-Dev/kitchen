@@ -10,6 +10,7 @@ import {
   Product5,
 } from "../../components/image";
 import Cart from "../../components/cart/cart";
+
 const Products = () => {
   const [isOpen, setOpen] = useState(false);
   const handleClose = () => {

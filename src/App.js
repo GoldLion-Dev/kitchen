@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import "@fontsource/metropolis"; // Defaults to weight 400
 function App() {
   return (
     <div className="App">

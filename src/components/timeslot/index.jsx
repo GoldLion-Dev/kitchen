@@ -33,7 +33,7 @@ const Timeslot = () => {
           component="selectbox"
           sx={{
             display: "flex",
-            width: { xs: "100%", sm: "184px", md: "184px" },
+            width: { xs: "100%", sm: "100%", md: "100%" },
             height: { xs: "40px", sm: "45px", md: "45px" },
             borderRadius: "6px",
             border: "1px solid var(--border, #E2E2E2)",

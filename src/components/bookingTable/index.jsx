@@ -2,6 +2,8 @@ import { Box, Button, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Counter from "../counter";
 import DatePicker from "../addCart/datePicker";
+import Modal from "./modal";
+
 const BookingTable = () => {
   const data = "Sunny Day Drive Bank";
   const [isOpen, setOpen] = useState(false);
@@ -26,6 +28,7 @@ const BookingTable = () => {
   };
   return (
     <>
+      <Modal isOpen={isModalOpen} handleClose={handleClose} />
       <Box sx={{ position: "relative" }}>
         <Box
           component="selectbox"

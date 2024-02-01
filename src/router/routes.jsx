@@ -15,6 +15,7 @@ import OrderNow from "../pages/orderNow";
 import OrderPlaced from "../pages/orderPlaced";
 import OrderSubscription from "../pages/orderSubscription";
 import Orders from "../pages/orders";
+import PrivacyPolicy from "../pages/privacy";
 
 export function MainRoutes() {
   const elements = useRoutes([
@@ -77,6 +78,10 @@ export function MainRoutes() {
     {
       path: "/orders",
       element: <Orders />,
+    },
+    {
+      path: "/privacy-policy",
+      element: <PrivacyPolicy />,
     },
   ]);
 

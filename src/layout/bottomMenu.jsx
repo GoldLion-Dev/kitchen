@@ -21,9 +21,8 @@ const BottomMenu = () => {
     <Box
       sx={{
         heigth: "67px",
-        display: "flex",
+        display: { xs: "flex", sm: "none", md: "none" },
         position: "fixed",
-
         bottom: "0px",
         gap: "68px",
         width: "100%",

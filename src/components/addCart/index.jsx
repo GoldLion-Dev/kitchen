@@ -20,29 +20,30 @@ import CustomRadioGroupButton from "./schedulePick";
 import DatePicker from "./datePicker";
 import RadioButtonCheckbox from "../radioTypeCheckbox";
 import { AddCart } from "../image";
+import Counter from "../counter";
 import { makeStyles } from "@mui/styles";
 // import WeekPicker from "./weekpicker";
 
 const useStyles = makeStyles((theme) => ({
   header_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
-    fontSize: "16px",
+    fontFamily: "Metropolis !important",
+    fontSize: "20px",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
-    lineHeight: "normal !important",
+    lineHeight: "20px !important",
   },
   sub_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px",
     fontStyle: "normal !important",
     fontWeight: "500 !important",
-    lineHeight: "normal !important",
+    lineHeight: "16px !important",
   },
   additional_info_text: {
     color: " var(--3, #202020)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "14px",
     fontStyle: "normal !important",
     fontWeight: "500 !important",
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description_text: {
     color: " var(--3, #989898)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px",
     fontStyle: "normal !important",
     fontWeight: "400 !important",
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
   food_name_text: {
     color: " var(--3, #444)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "15px !important",
     fontStyle: "normal !important",
     fontWeight: "500 !important",
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   food_price_text: {
     color: " var(--3, #444)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "15px !important",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sub_scription_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px !important",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
@@ -83,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
   add_cart_btn_text: {
     color: " var(--3, #FFF) !important",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px !important",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
@@ -91,11 +92,32 @@ const useStyles = makeStyles((theme) => ({
   },
   sub_text1: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "14px !important",
     fontStyle: "normal !important",
     fontWeight: "500 !important",
     lineHeight: "normal !important",
+  },
+  sub_scription_head: {
+    color: " var(--3, #000)",
+    fontFamily: "Metropolis !important",
+    fontSize: "16px !important",
+    fontStyle: "normal !important",
+    fontWeight: "500 !important",
+    lineHeight: "17px !important",
+  },
+  discount_text: {
+    color: " var(--3, #000)",
+    fontFamily: "Metropolis !important",
+    fontSize: "14px !important",
+    fontStyle: "normal !important",
+    fontWeight: "600 !important",
+    lineHeight: "17px !important",
+  },
+
+  subScribe_box: {
+    borderRadius: "8px",
+    border: "1px solid rgba(0, 0, 0, 0.10)",
   },
 
   root: {
@@ -124,7 +146,7 @@ const Modal = ({ isOpen, productData, handleClose }) => {
       sx={{
         maxWidth: "69%",
         // maxHeight: "1985px",
-        height: "100%",
+        // height: "100%",
         "& .MuiPaper-root": { margin: 0 },
         display: "flex",
         borderRadius: "12px 12px 0px 0px",
@@ -138,8 +160,9 @@ const Modal = ({ isOpen, productData, handleClose }) => {
           width: { xs: "100%", sm: "69%", md: "69%" },
           left: { xs: "0", sm: "19.5%", md: "19.5%" },
           right: { xs: "0", sm: "19.5%", md: "19.5%" },
-          top: { xs: "0", sm: "5%", md: "5%" },
-          height: "100%",
+          // top: { xs: "0", sm: "5%", md: "5%" },
+          // bottom: { xs: "0" },
+          height: "667px",
         },
       }}
     >
@@ -299,72 +322,7 @@ const Modal = ({ isOpen, productData, handleClose }) => {
                     alignItems: "center",
                   }}
                 >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="36"
-                      height="36"
-                      viewBox="0 0 36 36"
-                      fill="none"
-                    >
-                      <rect
-                        x="1"
-                        y="1"
-                        width="34"
-                        height="34"
-                        rx="5"
-                        stroke="black"
-                        stroke-opacity="0.1"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M19.2724 19.272H16.7269H11.636C10.9331 19.272 10.3633 18.7022 10.3633 17.9993C10.3633 17.2964 10.9331 16.7266 11.636 16.7266H16.7269L19.2724 16.7269L24.3632 16.7266C25.0662 16.7266 25.636 17.2964 25.636 17.9993C25.636 18.7022 25.0662 19.272 24.3633 19.272H19.2724Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </Box>
-                  <Box
-                    sx={{ width: "21px", textAlign: "center" }}
-                    className={classes.sub_text}
-                  >
-                    3
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="36"
-                      height="36"
-                      viewBox="0 0 36 36"
-                      fill="none"
-                    >
-                      <rect
-                        x="1"
-                        y="1"
-                        width="34"
-                        height="34"
-                        rx="5"
-                        stroke="black"
-                        stroke-opacity="0.1"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M19.2724 24.3633C19.2724 25.0662 18.7026 25.636 17.9996 25.636C17.2967 25.636 16.7269 25.0662 16.7269 24.3633V19.2724H11.636C10.9331 19.2724 10.3633 18.7026 10.3633 17.9996C10.3633 17.2967 10.9331 16.7269 11.636 16.7269H16.7269V11.636C16.7269 10.9331 17.2967 10.3633 17.9996 10.3633C18.7026 10.3633 19.2724 10.9331 19.2724 11.636V16.7269H24.3633C25.0662 16.7269 25.636 17.2967 25.636 17.9996C25.636 18.7026 25.0662 19.2724 24.3633 19.2724H19.2724V24.3633Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </Box>
+                  <Counter />
                 </Box>
               </Box>
             </Box>
@@ -745,6 +703,7 @@ const Modal = ({ isOpen, productData, handleClose }) => {
                 alignItems: "center",
               }}
             >
+              {/* size  */}
               <RadioButton />
             </Box>
             <Box
@@ -755,16 +714,21 @@ const Modal = ({ isOpen, productData, handleClose }) => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                paddingTop: { xs: "8.56px", sm: "16px" },
+                paddingBottom: { xs: "8.56px", sm: "10.36px" },
+                // paddingRight: { sm: "15px" },
+                paddingLeft: { sm: "15.59px" },
               }}
             >
+              {/* color  */}
               <SelectColor />
             </Box>
             <Box
-            // sx={{
-            //   width: "100%",
-            //   borderRadius: "6px",
-            //   border: "1px solid #E9E9E9",
-            // }}
+              sx={{
+                width: "100%",
+                // borderRadius: "6px",
+                // border: "1px solid #E9E9E9",
+              }}
             >
               <textarea
                 className={classes.additional_info_text}
@@ -782,23 +746,50 @@ const Modal = ({ isOpen, productData, handleClose }) => {
 
           {/* subscribe  */}
           <Box
-            sx={{ display: "flex", alignItems: "center", marginTop: "30px" }}
+            className={classes.subScribe_box}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginTop: "30px",
+              padding: "13.5px 18px",
+            }}
           >
-            <RadioButtonCheckbox
+            {/* <RadioButtonCheckbox
               sx={{ marginRight: "0px" }}
               selected={isSubScribe}
               handleToggle={handleClickSubScribe}
-            />
-            <Typography>Subscribe & Save</Typography>
-            <Box
-              sx={{
-                marginLeft: "22px",
-                padding: "5px 10px",
-                borderRadius: "2px",
-                background: "var(--border, #E2E2E2)",
-              }}
-            >
-              <Typography>10% OFF</Typography>
+            /> */}
+            <Box>
+              <Typography className={classes.sub_scription_head}>
+                Subscribe & Save
+              </Typography>
+              <Box
+                sx={{
+                  marginLeft: "22px",
+                  padding: "5px 10px",
+                  borderRadius: "2px",
+                  background: "var(--border, #E2E2E2)",
+                }}
+              >
+                <Typography className={classes.discount_text}>
+                  10% OFF
+                </Typography>
+              </Box>
+            </Box>
+            <Box>
+              <svg
+                width="5"
+                height="8"
+                viewBox="0 0 5 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.79078 4.47065C5.06974 4.21033 5.06974 3.78758 4.79078 3.52727L1.22015 0.195236C0.941196 -0.0650787 0.488172 -0.0650787 0.209217 0.195236C-0.0697389 0.455551 -0.0697389 0.878303 0.209217 1.13862L3.2755 4L0.211448 6.86138C-0.0675075 7.1217 -0.0675075 7.54445 0.211448 7.80476C0.490404 8.06508 0.943428 8.06508 1.22238 7.80476L4.79302 4.47273L4.79078 4.47065Z"
+                  fill="#141514"
+                />
+              </svg>
             </Box>
           </Box>
           {/* fourth */}

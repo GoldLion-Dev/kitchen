@@ -5,14 +5,15 @@ const WaitingTime = ({ selectedValue }) => {
     <Box
       sx={{
         display:
-          selectedValue == 3 ? { xs: "none", sm: "flex", md: "flex" } : "none",
+          selectedValue == 3 ? { xs: "flex", sm: "flex", md: "flex" } : "none",
         flexGrow: "1",
+        height: { xs: "40px", sm: "45px", md: "45px" },
       }}
       style={{
         borderRadius: "6px",
         border: "1px solid var(--border, #E2E2E2)",
         background: "#FFF",
-        height: "45px",
+
         alignItems: "center",
         justifyContent: "center",
         padding: "13px 12px",

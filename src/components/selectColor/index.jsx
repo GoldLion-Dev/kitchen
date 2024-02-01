@@ -17,11 +17,19 @@ const useStyle = makeStyles(() => ({
 
   header_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
     lineHeight: "normal !important",
+  },
+  price: {
+    color: " var(--3, #000)",
+    fontFamily: "Metropolis !important",
+    fontSize: "16px",
+    fontStyle: "normal !important",
+    fontWeight: "600 !important",
+    lineHeight: "17px !important",
   },
 }));
 const SelectColor = () => {
@@ -80,6 +88,7 @@ const SelectColor = () => {
           />
         </Box>
       </Box>
+      <Typography className={classes.price}>$10.00</Typography>
     </Box>
   );
 };

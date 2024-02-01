@@ -5,25 +5,22 @@ import { Typography, Button, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles(() => ({
   btn: {
-    paddingTop: "8.56px",
-    paddingBottom: "8.56px",
     width: "100%",
     borderRadius: "8px",
     border: "1px solid rgba(0, 0, 0, 0.10)",
     textAlign: "center",
     cursor: "pointer",
-    height: "31.96px",
     color: " var(--3, #202020)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "14px",
     fontStyle: "normal !important",
     fontWeight: "500 !important",
-    lineHeight: "17px !important",
+    lineHeight: "1 !important",
   },
 
   header_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
@@ -31,11 +28,16 @@ const useStyle = makeStyles(() => ({
   },
   btn_text: {
     color: " var(--3, #000)",
-    fontFamily: "MetropolisRegular !important",
+    fontFamily: "Metropolis !important",
     fontSize: "16px",
     fontStyle: "normal !important",
     fontWeight: "600 !important",
     lineHeight: "normal !important",
+  },
+  subScribe_box: {
+    borderRadius: "8px",
+    border: "1px solid rgba(0, 0, 0, 0.10)",
+    padding: "8px 18px",
   },
 }));
 const CustomRadioGroup = () => {
@@ -63,6 +65,12 @@ const CustomRadioGroup = () => {
       </Typography>
       <Box sx={{ display: "flex", gap: "13px" }}>
         <Box
+          sx={{
+            paddingTop: { xs: "8.56px", sm: "8px" },
+            paddingBottom: { xs: "8.56px", sm: "5px" },
+            paddingRight: { sm: "15px" },
+            paddingLeft: { sm: "15px" },
+          }}
           className={classes.btn}
           onClick={() => {
             handleChange(1);
@@ -72,9 +80,16 @@ const CustomRadioGroup = () => {
             color: selectedValue == 1 ? "#FFF" : "#202020",
           }}
         >
-          Small
+          Small $20
+          {/* <Typography sx={{ lineHeight: "1" }}>$20</Typography> */}
         </Box>
         <Box
+          sx={{
+            paddingTop: { xs: "8.56px", sm: "8px" },
+            paddingBottom: { xs: "8.56px", sm: "5px" },
+            paddingRight: { sm: "15px" },
+            paddingLeft: { sm: "15px" },
+          }}
           className={classes.btn}
           onClick={() => {
             handleChange(2);
@@ -84,9 +99,15 @@ const CustomRadioGroup = () => {
             color: selectedValue == 2 ? "#FFF" : "#202020",
           }}
         >
-          Medium
+          Medium $20
         </Box>
         <Box
+          sx={{
+            paddingTop: { xs: "8.56px", sm: "8px" },
+            paddingBottom: { xs: "8.56px", sm: "5px" },
+            paddingRight: { sm: "15px" },
+            paddingLeft: { sm: "15px" },
+          }}
           className={classes.btn}
           onClick={() => {
             handleChange(3);
@@ -96,7 +117,7 @@ const CustomRadioGroup = () => {
             color: selectedValue == 3 ? "#FFF" : "#202020",
           }}
         >
-          Large
+          Large $20
         </Box>
       </Box>
     </Box>

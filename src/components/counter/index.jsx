@@ -1,10 +1,42 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useState } from "react";
+import { makeStyles } from "@mui/styles";
 
+const useStyles = makeStyles(() => ({
+  count: {
+    color: "#000",
+    fontSize: "14px !important",
+    fontWeight: "500 !important",
+    fontFamily: "Metropolis !important",
+    fontStyle: "normal",
+    lineheight: "14px !important",
+    whiteSpace: "nowrap",
+  },
+}));
 const Counter = () => {
+  const classes = useStyles();
+  const [count, setCount] = useState(0);
+
+  const handleClickPlus = () => {
+    setCount(count + 1);
+  };
+  const handleClickMinus = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
   return (
     <Box sx={{ display: "flex", gap: "10px" }}>
-      <Box>
+      <Box
+        onClick={handleClickMinus}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          width: { xs: "22px" },
+          height: { xs: "22px" },
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="26"
@@ -31,8 +63,21 @@ const Counter = () => {
           />
         </svg>
       </Box>
-      <Typography>6</Typography>
-      <Box>
+      <Typography
+        sx={{ display: "flex", alignItems: "center" }}
+        className={classes.count}
+      >
+        {count}
+      </Typography>
+      <Box
+        onClick={handleClickPlus}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          width: { xs: "22px" },
+          height: { xs: "22px" },
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="26"

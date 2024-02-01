@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     lineheight: "normal !important",
   },
 }));
-const Sidebar = () => {
+const Sidebar = ({ removeMenu }) => {
   const classes = useStyles();
 
   const menuData = [
@@ -65,8 +65,8 @@ const Sidebar = () => {
 
   return (
     <Box
+      sx={{ display: { xs: "none", sm: "flex", md: "flex" } }}
       style={{
-        display: "flex",
         flexDirection: "column",
         alignItems: "center",
         padding: "0px 2px 12px 0px",
@@ -89,7 +89,10 @@ const Sidebar = () => {
             gap: "32px",
           }}
         >
-          <Box style={{ width: "100%", height: "45px" }}>
+          <Box
+            sx={{ display: removeMenu ? "none" : "display" }}
+            style={{ width: "100%", height: "45px" }}
+          >
             <Box
               style={{
                 borderRadius: "6px",
